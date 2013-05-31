@@ -38,15 +38,41 @@ If installing on Windows, please refer to [Installation on Windows](##installati
 
 Requirements:
 
-  * NodeJS `>= 0.6.16`
+  * NodeJS `= 0.8.10`
   * NPM `>= 1.1.16`
   * libxml2-dev
 
-Install:
+Install: (base headless ubuntu 10.12)
+
+    sudo apt-get update
+    apt-get install software-properties-common
+    sudo apt-get install python-software-properties python g++ make
+
+    sudo add-apt-repository ppa:chris-lea/node.js
+
+    sudo apt-get update
+    sudo apt-get install nodejs
+    
+    #nodejs contiene a "npm"
+
+    read -p "ver que no de error. Pulse una tecla para continuar"
+
+    ##n maneja version de node activa
+    npm install n
+
+    ##cloud9 anda con la v0.8.x - esta adaptado a la ultima v0.10
+    n 0.8.10
+
+    sudo apt-get install libxml2-dev
+
+    apt-get install git
 
     git clone https://github.com/ajaxorg/cloud9.git
     cd cloud9
     npm install
+    
+    bin/cloud9.sh -l 0.0.0.0 --username usr --password pwd
+
 
 The above install steps create a `cloud9` directory with a `bin/cloud9.sh`
 script that can be used to start Cloud9:
