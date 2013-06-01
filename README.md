@@ -53,25 +53,34 @@ Install: (base headless ubuntu 10.12)
     sudo apt-get update
     sudo apt-get install nodejs
     
-    #nodejs contiene a "npm"
+    #last nodejs version contains "npm"
 
-    read -p "ver que no de error. Pulse una tecla para continuar"
+    read -p "check for errors. Press any key to continue"
 
-    ##n maneja version de node activa
+    ##n set active node version
     npm install n
 
-    ##cloud9 anda con la v0.8.x - esta adaptado a la ultima v0.10
+    ##cloud9 works with v0.8.10 - Doesn't work yet with v0.10.x
     n 0.8.10
 
     sudo apt-get install libxml2-dev
 
     apt-get install git
 
+    read -p "check for errors. Press any key to continue"
+
     git clone https://github.com/ajaxorg/cloud9.git
     cd cloud9
     npm install
     
-    bin/cloud9.sh -l 0.0.0.0 --username usr --password pwd
+    read -p "check for errors. Press any key to continue"
+    
+    cd ..
+    #start server
+    cloud9/bin/cloud9.sh -l 0.0.0.0 --username usr --password pwd -w proyect_folder -p 3131
+
+    #start server for another proyect
+    cloud9/bin/cloud9.sh -l 0.0.0.0 --username usr --password pwd -w another_folder -p 3132
 
 
 The above install steps create a `cloud9` directory with a `bin/cloud9.sh`
