@@ -195,6 +195,7 @@ var config = [
     "./cloud9.run.other",
     "architect/plugins/architect.log",
     "./cloud9.ide.auth",
+    "./cloud9.ide.fossil",
     "./cloud9.ide.git",
     "./cloud9.ide.gittools",
     "./cloud9.ide.hg",

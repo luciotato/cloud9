@@ -718,6 +718,14 @@ module.exports = ext.register("ext/console/console", {
                 ["Commit", "hg commit -m ", null, null, true],
                 ["Parents", "hg parents ", null, null, true]
             ],
+            "Fossil" : [
+                ["Status", "fossil status"],
+                ["Update", "fossil update"],
+                ["AddRemove", "fossil addremove"],
+                ["Commit", "fossil commit -m ", null, null, true],
+                ["Undo", "fossil undo"],
+                ["Remove", "fossil rm ", null, null, true],
+            ],
             "Npm" : [
                 ["Install", "npm install"],
                 ["Uninstall", "npm uninstall", null, null, true]

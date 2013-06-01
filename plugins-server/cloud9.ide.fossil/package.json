@@ -1,0 +1,16 @@
+{
+    "name": "cloud9.ide.fossil",
+    "version": "0.0.1",
+
+    "main": "./fossil.js",
+    "private": true,
+
+    "plugin": {
+        "consumes": [
+            "ide",
+            "process-manager",
+            "run-shell",
+            "eventbus"
+        ]
+    }
+}
