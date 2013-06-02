@@ -42,7 +42,19 @@ Requirements:
   * NPM `>= 1.1.16`
   * libxml2-dev
 
-Install: (base headless ubuntu 10.12)
+Install: (over base headless ubuntu 10.12 server)
+
+Option a) No work, download working VM.
+
+* Download Virtual Machine Image: (Size 1GB), Ubuntu 10.12 AMD64 - OVA - Open Virtualization Format Image
+* Atention! -TORRENT file-
+* includes: nodejs, cloud9 
+* Bonus Track: basic support for Fossil-SCM
+* where? (torrent): https://sourceforge.net/projects/cloud9vmubuntu1/files
+* user root, pwd root
+* Tested with: VirtualBox
+
+Option b) Install, clone, make, run.
 
     sudo apt-get update
     apt-get install software-properties-common
