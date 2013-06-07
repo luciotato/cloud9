@@ -57,48 +57,42 @@ Option a) No work, download working VM.
 Option b) Install, clone, make, run.
 
     #ubuntu:
-    sudo apt-get update
-    sudo apt-get install software-properties-common
-    sudo add-apt-repository ppa:chris-lea/node.js
+    apt-get update
+    apt-get install software-properties-common
+    add-apt-repository ppa:chris-lea/node.js
 
     #debian:
-    #install this as a script: add-apt-repository.sh
-    sudo ./add-apt-repository.sh ppa:chris-lea/node.js
+    #install this as a script: https://github.com/luciotato/cloud9/blob/master/add-apt-repository.sh
+    ./add-apt-repository.sh ppa:chris-lea/node.js
 
-    sudo apt-get update
+    apt-get update
 
-    sudo apt-get install python-software-properties python g++ make
+    apt-get install python-software-properties python g++ make
 
-    sudo apt-get install nodejs
+    apt-get install nodejs
     
     #last nodejs version contains "npm"
 
-    read -p "check for errors. Press any key to continue"
-
     ##n set active node version
-    npm install n
+    npm install -g n
 
     ##cloud9 works with v0.8.10 - Doesn't work yet with v0.10.x
     n 0.8.10
 
-    sudo apt-get install libxml2-dev
+    apt-get install libxml2-dev
 
     apt-get install git
 
-    read -p "check for errors. Press any key to continue"
-
-    git clone https://github.com/ajaxorg/cloud9.git
+    git clone https://github.com/luciotato/cloud9.git
     cd cloud9
     npm install
     
-    read -p "check for errors. Press any key to continue"
-    
     cd ..
     #start server
-    cloud9/bin/cloud9.sh -l 0.0.0.0 --username usr --password pwd -w proyect_folder -p 3131
+    cloud9/bin/cloud9.sh -l 0.0.0.0 --username usr --password pwd -w /usr/share/proyect_folder -p 3131
 
     #start server for another proyect
-    cloud9/bin/cloud9.sh -l 0.0.0.0 --username usr --password pwd -w another_folder -p 3132
+    cloud9/bin/cloud9.sh -l 0.0.0.0 --username usr --password pwd -w /usr/share/another_folder -p 3132
 
 
 The above install steps create a `cloud9` directory with a `bin/cloud9.sh`
