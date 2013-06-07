@@ -56,13 +56,19 @@ Option a) No work, download working VM.
 
 Option b) Install, clone, make, run.
 
+    #ubuntu:
     sudo apt-get update
-    apt-get install software-properties-common
-    sudo apt-get install python-software-properties python g++ make
-
+    sudo apt-get install software-properties-common
     sudo add-apt-repository ppa:chris-lea/node.js
 
+    #debian:
+    #install this as a script: add-apt-repository.sh
+    sudo ./add-apt-repository.sh ppa:chris-lea/node.js
+
     sudo apt-get update
+
+    sudo apt-get install python-software-properties python g++ make
+
     sudo apt-get install nodejs
     
     #last nodejs version contains "npm"
